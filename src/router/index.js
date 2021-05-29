@@ -1,42 +1,42 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router'
 
-const Feedbacks = () => import("../views/Feedbacks");
-const Home = () => import("../views/Home");
-const Credentials = () => import("../views/Credentials");
+const Feedbacks = () => import('../views/Feedbacks')
+const Home = () => import('../views/Home')
+const Credentials = () => import('../views/Credentials')
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
+    path: '/',
+    name: 'Home',
     component: Home
   },
   {
-    path: "/feedbacks",
-    name: "Feedbacks",
+    path: '/feedbacks',
+    name: 'Feedbacks',
     component: Feedbacks,
     meta: {
       hasAuth: true
     }
   },
   {
-    path: "/credentials",
-    name: "Credentials",
+    path: '/credentials',
+    name: 'Credentials',
     component: Credentials,
     meta: {
       hasAuth: true
     }
   },
   {
-    path: "/:pathMatch(.*)*",
+    path: '/:pathMatch(.*)*',
     redirect: {
-      name: "Home"
+      name: 'Home'
     }
   }
-];
+]
 
 const router = createRouter({
-  history: createWebHistory("/"),
+  history: createWebHistory('/'),
   routes
-});
+})
 
-export default router;
+export default router

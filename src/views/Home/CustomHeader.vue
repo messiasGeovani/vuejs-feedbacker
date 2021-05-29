@@ -13,11 +13,13 @@
         <div class="flex">
           <button
             class="px-6 py-2 font-bold rounded-full text-white focus:outline-none"
+            @click="() => emit('create-account')"
           >
             Crie uma conta
           </button>
           <button
             class="px-6 py-2 font-bold bg-white rounded-full text-brand-main focus:outline-none"
+            @click="() => emit('login')"
           >
             Entrar
           </button>
@@ -49,7 +51,10 @@
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  setup(_, { emit }) {
+    return { emit }
+  }
 }
 </script>
 
