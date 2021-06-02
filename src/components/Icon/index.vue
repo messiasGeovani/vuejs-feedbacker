@@ -4,11 +4,13 @@
 
 <script>
 import Loading from './Loading'
+import Copy from './Copy'
 
 export default {
   name: 'Icon',
   components: {
-    Loading
+    Loading,
+    Copy
   },
   props: {
     name: {
