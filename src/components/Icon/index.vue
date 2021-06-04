@@ -5,12 +5,14 @@
 <script>
 import Loading from './Loading'
 import Copy from './Copy'
+import ChevronDown from './ChevronDown'
 
 export default {
   name: 'Icon',
   components: {
     Loading,
-    Copy
+    Copy,
+    ChevronDown
   },
   props: {
     name: {
